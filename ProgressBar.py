@@ -20,8 +20,8 @@ class ProgressBarApp(Tk):
         self.btn_start = Button(text="Start", command = self.start_progress_bar)
         self.btn_start.pack(side=LEFT)
         
-        self.btn_stop = Button(text="Stop")
-        self.btn_stop.pack(side=LEFT)
+        self.btn_stop = Button(text="Stop", command = self.stop_progress_bar)
+        self.btn_stop.pack(side=RIGHT)
         
         self.barVal = 0
         self.maxbarVal = 5000
@@ -43,6 +43,8 @@ class ProgressBarApp(Tk):
         self.progress_bar["maximum"] = 5000
         self.update_bar()
     
+    def stop_progress_bar(self):
+        self.enable_bar = False
     
 pBar = ProgressBarApp()
 pBar.mainloop()
