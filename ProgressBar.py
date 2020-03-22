@@ -19,6 +19,9 @@ class ProgressBarApp(Tk):
     
         self.btn_start = Button(text="Start")
         self.btn_start.pack(side=LEFT)
+        
+        self.btn_stop = Button(text="Stop")
+        self.btn_stop.pack(side=LEFT)
     
     
 pBar = ProgressBarApp()
