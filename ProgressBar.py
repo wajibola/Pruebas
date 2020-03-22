@@ -12,5 +12,13 @@ class ProgressBarApp(Tk):
     def __init__(self, *args, **kwargs):
         Tk.__init__(self,*args, **kwargs)
         
-
-
+    
+        self.progress_bar = Progressbar(orient="horizontal",
+                                        length=200, mode="determinate")
+        self.progress_bar.pack(side=TOP)
+    
+    
+    
+    
+pBar = ProgressBarApp()
+pBar.mainloop()
